@@ -1,0 +1,26 @@
+{
+  "name": "abjjad-churn-dashboard-api-new",
+  "version": "1.0.0",
+  "description": "ABJJAD Subscription Churn Dashboard - Cloudflare Worker API & React Frontend",
+  "main": "worker.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail",
+    "d1:query": "wrangler d1 execute abjjad-churn-db --command",
+    "d1:init": "wrangler d1 execute abjjad-churn-db --file=schema.sql"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "d1",
+    "dashboard",
+    "analytics",
+    "churn"
+  ],
+  "author": "ABJJAD",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+name = "abjjad-churn-dashboard-api-new"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Cron trigger - runs daily at 6:00 AM UTC
+[triggers]
+crons = ["0 6 * * *"]
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "abjjad-churn-db"
+database_id = "f859afdf-b7f7-4258-a157-a0cbf6f31f31"
+
+# Environment variables
+[vars]
+MIXPANEL_PROJECT_ID = "2978351"
+
+# Secrets (use: wrangler secret put MIXPANEL_API_SECRET)
+# MIXPANEL_API_SECRET = "your-secret-here"
